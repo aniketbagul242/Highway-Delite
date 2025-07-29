@@ -24,7 +24,7 @@ const Dashboard = () => {
   // getting created notes from backend
   const fetchNotes = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/api/notes', {
+      const res = await axios.get('https://note-app-backend-ns8k.onrender.com/api/notes', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setNotes(res.data.notes);
@@ -38,7 +38,7 @@ const Dashboard = () => {
     if (!noteTitle.trim() || !noteContent.trim()) return;
     try {
       const res = await axios.post(
-        'http://localhost:3000/api/notes',
+        'https://note-app-backend-ns8k.onrender.com/api/notes',
         { title: noteTitle, content: noteContent },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -55,7 +55,7 @@ const Dashboard = () => {
   //handling delete notes
   const handleDeleteNote = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/notes/${id}`, {
+      await axios.delete(`https://note-app-backend-ns8k.onrender.com/api/notes/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setNotes(notes.filter((note) => note._id !== id));
