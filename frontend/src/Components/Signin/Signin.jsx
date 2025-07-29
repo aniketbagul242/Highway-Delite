@@ -18,7 +18,7 @@ const Signin = () => {
     setLoading(true);
     setMessage("");
     try {
-      const res = await axios.post("http://localhost:3000/api/user/login", { email });
+      const res = await axios.post("https://note-app-backend-ns8k.onrender.com/api/user/login", { email });
       if (res.data.success) {
         setMessage("OTP sent to your email.");
         setOtpSent(true);
@@ -39,7 +39,7 @@ const Signin = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:3000/api/user/verifyemail", { code: otp });
+      const res = await axios.post("https://note-app-backend-ns8k.onrender.com/api/user/verifyemail", { code: otp });
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", JSON.stringify(res.data.user));
@@ -58,7 +58,7 @@ const Signin = () => {
     try {
       if (response.code) {
         const result = await axios.get(
-          `http://localhost:3000/api/user/googleauth?code=${response.code}&mode=signin`
+          `https://note-app-backend-ns8k.onrender.com/api/user/googleauth?code=${response.code}&mode=signin`
         );
         if (result.data.success) {
           setToken(result.data.token);
