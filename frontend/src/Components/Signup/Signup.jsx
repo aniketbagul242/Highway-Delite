@@ -35,7 +35,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/api/user/register", {
+      const response = await axios.post("https://note-app-backend-ns8k.onrender.com/api/user/register", {
         name: formData.name,
         birthdate: formData.dob,
         email: formData.email
@@ -56,7 +56,7 @@ const Signup = () => {
 
   const handleOtpVerify = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/api/user/verifyemail", {
+      const res = await axios.post("https://note-app-backend-ns8k.onrender.com/api/user/verifyemail", {
         code: formData.otp
       });
 
@@ -77,7 +77,7 @@ const Signup = () => {
   const responseGoogle = async (response) => {
     try {
       if (response.code) {
-        const result = await axios.get(`http://localhost:3000/api/user/googleauth?code=${response.code}&mode=signup`);
+        const result = await axios.get(`https://note-app-backend-ns8k.onrender.com/api/user/googleauth?code=${response.code}&mode=signup`);
         setMessage(result.data.message);
         setToken(result.data.token);
         localStorage.setItem("token", result.data.token);
