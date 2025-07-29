@@ -117,7 +117,7 @@ const Signup = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Jonas Khanwald"
+              placeholder=""
               className="w-full mb-4 px-4 py-2 border rounded-md"
               required
             />
@@ -138,7 +138,7 @@ const Signup = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="example@email.com"
+              placeholder=""
               className="w-full mb-4 px-4 py-2 border rounded-md"
               required
             />
