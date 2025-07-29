@@ -100,7 +100,7 @@ const Signin = () => {
               type="email"
               required
               className="w-full px-4 py-2 mb-4 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              placeholder="jonas_kahnwald@gmail.com"
+              placeholder=""
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
