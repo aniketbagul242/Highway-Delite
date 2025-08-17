@@ -1,6 +1,6 @@
 # 📝 Full-Stack Note-Taking Application
 
-A responsive, full-stack note-taking web application built as part of an internship assignment. Users can sign up using Email OTP or Google Login, manage notes, and view profile details.
+A responsive, full-stack note-taking web application built using the MERN stack. Users can sign up using Email OTP or Google Login, manage notes, and view profile details.
 
 ## 🔗 Live Demo
 
@@ -23,7 +23,6 @@ A responsive, full-stack note-taking web application built as part of an interns
 - MongoDB (Mongoose)
 - JWT (Authentication)
 - Nodemailer (OTP via Email)
-- dotenv
 
 ---
 
@@ -42,10 +41,4 @@ A responsive, full-stack note-taking web application built as part of an interns
 - ✅ Display user details after login
 
 ---
-
-## 📸 UI Design
-
-Based on the design provided here:  
-[🎨 Figma/UI Assets]
-https://hwdlte.com/RvqdLn
 
